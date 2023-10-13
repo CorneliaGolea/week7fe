@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CardContainer from "./components/cardContainer/CardContainer";
+import PostContainer from "./components/postContainer/PostContainer";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [reset, setReset] = useState();
+
+  // useEffect(() => {
+  //   async function onRenderGetBooks() {
+  //     const books = await getAllBooks();
+  //     await setBooks(books);
+  //   }
+  //   onRenderGetBooks();
+  // }, [reset]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello world</h1>
+
+      <CardContainer />
+      <PostContainer />
     </div>
   );
 }
